@@ -11,6 +11,7 @@
  * @author Lefty <lefty@multihost.cz>
  * @author Vojta Beran <xmamut@email.cz>
  * @author zbynek.krivka@seznam.cz
+ * @author Bohumir Zamecnik <bohumir.zamecnik@gmail.com>
  */
 $lang['encoding']              = 'utf-8';
 $lang['direction']             = 'ltr';
@@ -46,7 +47,6 @@ $lang['btn_backtomedia']       = 'Zpět do Výběru dokumentu';
 $lang['btn_subscribe']         = 'Odebírat emailem změny stránky';
 $lang['btn_profile']           = 'Upravit profil';
 $lang['btn_reset']             = 'Reset';
-$lang['btn_resendpwd']         = 'Zaslat nové heslo';
 $lang['btn_draft']             = 'Upravit koncept';
 $lang['btn_recover']           = 'Obnovit koncept';
 $lang['btn_draftdel']          = 'Vymazat koncept';
@@ -83,7 +83,6 @@ $lang['profnoempty']           = 'Nelze zadat prázdné jméno nebo mailová adr
 $lang['profchanged']           = 'Uživatelský profil změněn.';
 $lang['pwdforget']             = 'Zapomněli jste heslo? Nechte si zaslat nové';
 $lang['resendna']              = 'Tato wiki neumožňuje zasílání nových hesel.';
-$lang['resendpwd']             = 'Odeslat nové heslo pro uživatele';
 $lang['resendpwdmissing']      = 'Musíte vyplnit všechny položky.';
 $lang['resendpwdnouser']       = 'Bohužel takový uživatel v systému není.';
 $lang['resendpwdbadauth']      = 'Autorizační kód není platný. Zadali jste opravdu celý odkaz na potvrzovací stránku?';
@@ -190,6 +189,11 @@ $lang['external_edit']         = 'upraveno mimo DokuWiki';
 $lang['summary']               = 'Komentář k úpravám';
 $lang['noflash']               = 'Pro přehrání obsahu potřebujete <a href="http://www.adobe.com/products/flashplayer/">Adobe Flash Plugin</a>.';
 $lang['download']              = 'Stáhnout snippet';
+$lang['tools']                 = 'Nástroje';
+$lang['user_tools']            = 'Uživatelské nástroje';
+$lang['site_tools']            = 'Nástroje pro tento web';
+$lang['page_tools']            = 'Nástroje pro stránku';
+$lang['skip_to_content']       = 'jít k obsahu';
 $lang['mail_newpage']          = 'nová stránka:';
 $lang['mail_changed']          = 'změna stránky:';
 $lang['mail_subscribe_list']   = 'stránky změněné ve jmenném prostoru:';
