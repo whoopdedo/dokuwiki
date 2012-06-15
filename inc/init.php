@@ -233,10 +233,11 @@ function init_paths(){
             'lockdir'   => 'locks',
             'tmpdir'    => 'tmp');
 
-    foreach($paths as $c => $p){
-        if(empty($conf[$c]))  $conf[$c] = $conf['savedir'].'/'.$p;
-        $conf[$c]             = init_path($conf[$c]);
-        if(empty($conf[$c]))  nice_die("The $c ('$p') does not exist, isn't accessible or writable.
+    foreach($paths as $c => $p) {
+        $path = empty($conf[$c]) ? $conf['savedir'].'/'.$p : $conf[$c];
+        $conf[$c] = init_path($path);
+        if(empty($conf[$c]))
+            nice_die("The $c ('$p') at $path is not found, isn't accessible or writable.
                 You should check your config and permission settings.
                 Or maybe you want to <a href=\"install.php\">run the
                 installer</a>?");
@@ -265,7 +266,7 @@ function init_lang($langCode) {
 }
 
 /**
- * Checks the existance of certain files and creates them if missing.
+ * Checks the existence of certain files and creates them if missing.
  */
 function init_files(){
     global $conf;
@@ -307,12 +308,12 @@ function init_files(){
  * Returns absolute path
  *
  * This tries the given path first, then checks in DOKU_INC.
- * Check for accessability on directories as well.
+ * Check for accessibility on directories as well.
  *
  * @author Andreas Gohr <andi@splitbrain.org>
  */
 function init_path($path){
-    // check existance
+    // check existence
     $p = fullpath($path);
     if(!@file_exists($p)){
         $p = fullpath(DOKU_INC.$path);
@@ -560,7 +561,7 @@ function fullpath($path,$exists=false){
     }
     $finalpath = $root.implode('/', $newpath);
 
-    // check for existance when needed (except when unit testing)
+    // check for existence when needed (except when unit testing)
     if($exists && !defined('DOKU_UNITTEST') && !@file_exists($finalpath)) {
         return false;
     }
