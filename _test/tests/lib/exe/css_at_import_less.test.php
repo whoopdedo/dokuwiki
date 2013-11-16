@@ -17,7 +17,7 @@ class css_at_import_less_test extends DokuWikiTest {
             $this->markTestSkipped('Could not create directory.');
         }
 
-        $this->file = tempnam($dir, 'css');
+        $this->file = tempnam($dir, 'css').'.less';
 
         $import = '';
         do {
